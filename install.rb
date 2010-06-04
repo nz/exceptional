@@ -1,5 +1,5 @@
 # This is the post install hook for when Exceptional is installed as a plugin.
-require 'ftools'
+require 'fileutils'
 
 # puts IO.read(File.join(File.dirname(__FILE__), 'README'))
 
@@ -15,5 +15,5 @@ else
   puts "For exceptional to work you need to configure your API Key"
   puts "  See #{example_config_file}"
   puts "If you don't have an API Key, get one at http://getexceptional.com/"
-  File.copy example_config_file, config_file
+  FileUtils.copy example_config_file, config_file
 end
